@@ -1,0 +1,42 @@
+<div>
+    <h1 class="heading">{{title}}</h1>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="subheading">{{desc}}</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>icon</th>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Available Qty</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = 'let prod of product'>
+                    <td>
+                        <img [src]="prod.icon" alt="ref_img"
+                        [style.width.px] = "imgWidth" [style.height.px] = "imgHeight">
+                    </td>
+                    <td>
+                        {{prod.name}}
+                    </td>
+                    <td>
+                        {{prod.id}}
+                    </td>
+                    <td>
+                        {{prod.qty}}
+                    </td>
+                    <td>
+                        {{prod.price}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
